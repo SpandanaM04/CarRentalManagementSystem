@@ -1,0 +1,12 @@
+{
+  "name": "car-bike-rental-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack car and bike rental management system using HTML, CSS, JavaScript and Node.js",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node server.js" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}

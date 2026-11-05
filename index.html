@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RentalHub — Rent a car or bike</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#" data-view="home"><span class="brand-mark">R</span> rental<span>hub</span></a><nav id="topnav"><a href="#" data-view="home">Home</a><a href="#fleet" data-view="fleet">Explore fleet</a><a href="#" data-view="contact">Contact</a></nav><div class="top-actions" id="topActions"><button class="btn btn-ghost" data-action="login">Log in</button><button class="btn btn-primary" data-action="register">Get started <span>↗</span></button></div><button class="mobile-menu" id="mobileMenu">☰</button></header>
+<main id="app"><section class="loading">Loading available vehicles…</section></main>
+<div id="modalRoot"></div><div id="toast" role="status"></div>
+<footer class="footer"><div class="footer-brand"><a class="brand" href="#" data-view="home"><span class="brand-mark">R</span> rental<span>hub</span></a><p>Simple car and bike rentals.</p></div><div><b>Explore</b><a href="#" data-view="fleet">Our fleet</a><a href="#" data-view="contact">Contact us</a></div><div><b>Account</b><a href="#" data-action="login">Log in</a><a href="#" data-action="register">Create account</a></div><div class="subscribe"><b>Get the good miles</b><p>New rides and special offers, occasionally.</p><form id="subscribeForm"><input name="email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></form></div><small>© <span id="year"></span> RentalHub. Academic demo project.</small></footer>
+<script src="/app.js"></script>
+</body></html>
