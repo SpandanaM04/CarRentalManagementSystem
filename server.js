@@ -116,5 +116,5 @@ app.put('/api/admin/queries/:id',auth,admin,(req,res)=>{const q=db.queries.find(
 app.put('/api/admin/content',auth,admin,(req,res)=>{db.content={...db.content,heroTitle:String(req.body.heroTitle||db.content.heroTitle),heroSubtitle:String(req.body.heroSubtitle||db.content.heroSubtitle),about:String(req.body.about||db.content.about)};save();res.json({message:'Page content updated.'});});
 app.put('/api/admin/contact',auth,admin,(req,res)=>{db.contact={email:String(req.body.email||db.contact.email),phone:String(req.body.phone||db.contact.phone),address:String(req.body.address||db.contact.address)};save();res.json({message:'Contact details updated.'});});
 app.put('/api/admin/password',auth,admin,async(req,res)=>{const u=current(req);if(!await bcrypt.compare(String(req.body.currentPassword||''),u.password))return res.status(400).json({error:'Current password is incorrect.'});if(String(req.body.newPassword||'').length<6)return res.status(400).json({error:'New password must be at least 6 characters.'});u.password=await bcrypt.hash(req.body.newPassword,10);save();res.json({message:'Admin password changed.'});});
-app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'index.html')));
+app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'public','index.html')));
 app.listen(PORT,()=>console.log(`RentalHub is running at http://localhost:${PORT}`));
